@@ -1,0 +1,69 @@
+{
+    "project": "Medical Image Classification - Pneumonia Detection",
+    "completion_date": "2025-12-04 02:15:04",
+    "hardware": {
+        "gpu": "Quadro M1200",
+        "memory": "4.23 GB"
+    },
+    "dataset": {
+        "train_samples": 4613,
+        "val_samples": 691,
+        "test_samples": 624,
+        "image_size": "128x128"
+    },
+    "models_trained": [
+        "LightVGG",
+        "ResNet-18",
+        "SimpleInception",
+        "MobileNet-V2"
+    ],
+    "best_overall_model": "LightVGG",
+    "performance_summary": {
+        "LightVGG": {
+            "test_accuracy": 0.7660256410256411,
+            "test_f1_score": 0.841304347826087,
+            "test_auc_roc": 0.9066732412886259,
+            "clinical_notes": {
+                "true_positives": 387,
+                "false_negatives": 3,
+                "false_positives": 143
+            }
+        },
+        "ResNet-18": {
+            "test_accuracy": 0.7387820512820513,
+            "test_f1_score": 0.8267800212539851,
+            "test_auc_roc": 0.9098400175323251,
+            "clinical_notes": {
+                "true_positives": 389,
+                "false_negatives": 1,
+                "false_positives": 162
+            }
+        },
+        "SimpleInception": {
+            "test_accuracy": 0.75,
+            "test_f1_score": 0.8293216630196937,
+            "test_auc_roc": 0.9038516326977866,
+            "clinical_notes": {
+                "true_positives": 379,
+                "false_negatives": 11,
+                "false_positives": 145
+            }
+        },
+        "MobileNet-V2": {
+            "test_accuracy": 0.7596153846153846,
+            "test_f1_score": 0.8383620689655172,
+            "test_auc_roc": 0.8910859083936007,
+            "clinical_notes": {
+                "true_positives": 389,
+                "false_negatives": 1,
+                "false_positives": 149
+            }
+        }
+    },
+    "recommendations": [
+        "Use LightVGG for highest accuracy (76.6%)",
+        "Use LightVGG for balanced performance (F1: 0.841)",
+        "Consider ensemble voting for production deployment",
+        "Regular validation with new data recommended"
+    ]
+}
