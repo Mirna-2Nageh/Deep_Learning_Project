@@ -1,3 +1,6 @@
 chest_xray
 DEEP
 models
+.venv
+results
+logs
